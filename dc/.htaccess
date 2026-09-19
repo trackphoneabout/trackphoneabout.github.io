@@ -1,0 +1,20 @@
+# Matikan listing folder biar gak bisa lihat isi folder DC
+Options -Indexes
+
+# Lindungi IP.txt biar gak bisa dibuka dari browser
+<Files "IP.txt">
+  Order Allow,Deny
+  Deny from all
+</Files>
+
+# Lindungi .htaccess itu sendiri
+<Files ".htaccess">
+  Order Allow,Deny
+  Deny from all
+</Files>
+
+# log.php tetap boleh diakses (buat nerima data)
+<Files "log.php">
+  Order Allow,Deny
+  Allow from all
+</Files>
